@@ -59,7 +59,7 @@ public final class ImageResponseSerializer: ResponseSerializer {
         "image/x-win-bitmap"
     ]
 
-    static let streamImageInitialBytePattern = Data(bytes: [255, 216]) // 0xffd8
+    static let streamImageInitialBytePattern = Data([255, 216]) // 0xffd8
 
     // MARK: Initialization
 

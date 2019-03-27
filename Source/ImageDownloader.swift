@@ -464,7 +464,7 @@ open class ImageDownloader {
             let urlID = ImageDownloader.urlIdentifier(for: requestReceipt.request.convertible)
             guard let responseHandler = self.responseHandlers[urlID] else { return }
 
-            if let index = responseHandler.operations.index(where: { $0.receiptID == requestReceipt.receiptID }) {
+            if let index = responseHandler.operations.firstIndex(where: { $0.receiptID == requestReceipt.receiptID }) {
                 let operation = responseHandler.operations.remove(at: index)
 
                 let response: DataResponse<Image> = {
